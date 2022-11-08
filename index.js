@@ -15,57 +15,69 @@ Olá, você foi contratado para executar este projeto. É importante que você a
 - Se o tempo for 3x maior que o necessário para o prato, o microondas deve exibir a mensagem: “kabumm”;
 - No final de cada tarefa, o microondas deverá exibir a mensagem: "Prato pronto, bom apetite!!!". */
 
-function tempMicronOndas (botao,temp=0){
-    let botao = [0.10,0.8,0.15,0.12,0.8]
-        
-    if (temp == botao[0]  ){
-        console.log('Prato pronto, bom apetite !!!');
-    } else if (temp >= 2* botao[0] && temp < 3* botao[0]){
-        console.log('A comida queimou !!!'); 
-    }else if (temp > 3* botao[0]){
-            console.log('Kabumm !!!');          
-    }else if (temp < botao[0]) {
-        console.log('tempo insuficiente !!!');
-    }    
-    else if (temp == botao[1]  ){
-        console.log('Prato pronto, bom apetite !!!');
-    } else if (temp >= 2* botao[1]  && temp < 3* botao[1] ){
-        console.log('A comida queimou !!!'); 
-    }else if (temp > 3* botao[1] ){
-            console.log('Kabumm !!!');          
-    }else if (temp < botao[1] ) {
-        console.log('tempo insuficiente !!!');
-    }
+function microOndas(botao, time=0){
 
-    else if (temp == botao[2]   ){
-        console.log('Prato pronto, bom apetite !!!');
-    } else if (temp >= 2* botao[2]  && temp < 3* botao[2] ){
-        console.log('A comida queimou !!!'); 
-    }else if (temp > 3* botao[2] ){
-            console.log('Kabumm !!!');          
-    }else if (temp < botao[2] ) {
-        console.log('tempo insuficiente !!!');
-    } 
-    
-    else if (temp == botao[3]   ){
-        console.log('Prato pronto, bom apetite !!!');
-    } else if (temp >= 2* botao[3]  && temp < 3* botao[3] ){
-        console.log('A comida queimou !!!'); 
-    }else if (temp > 3* botao[3] ){
-            console.log('Kabumm !!!');          
-    }else if (temp < botao[3] ) {
-        console.log('tempo insuficiente !!!');
-    }
+  //Validar se está pronto
+  
+  if (botao == 1 && time == 0.10){
+    return('A Pipoca está pronta, bom apetite!');
+  }else if (botao == 2 && time == 0.08){
+    return('O Macarrão está pronto, bom apetite!');
+  } else  if (botao == 3 && time == 0.15){
+    return('A Carne está pronta, bom apetite!');
+  }else if (botao == 4 && time == 0.12){
+    return('O Feijão está pronto, bom apetite!');
+  }else if (botao == 5 && time == 0.08){
+    return('O Brigadeiro está pronto, bom apetite!');
+  }else if (botao > 5 && time > 0) {
+    return('Prato Inexistente');
+  }
 
-    else if (temp == botao[4]  ){
-        console.log('Prato pronto, bom apetite !!!');
-    } else if (temp >= 2* botao[4]  && temp < 3* botao[4] ){
-        console.log('A comida queimou !!!'); 
-    }else if (temp > 3* botao[4] ){
-            console.log('Kabumm !!!');          
-    }else if (temp < botao[4] ) {
-        console.log('tempo insuficiente !!!');
-    }else 
-    console.log ('Prato Inexistente')
+  //Validar tempo insuficiente
+  if (botao == 1 && time < 0.10){
+    return 'Tempo insuficiente';
+  }else if (botao == 2 && time < 0.08){
+    return 'Tempo insuficiente';
+  } else  if (botao == 3 && time < 0.15){
+    return 'Tempo insuficiente';
+  }else if (botao == 4 && time < 0.12){
+    return 'Tempo insuficiente';
+  }else if (botao == 5 && time < 0.08){
+    return 'Tempo insuficiente';
+  }
+
+  //Validar tempo 2x
+  if (botao == 1 && time > 0.10 && time < 0.10 *3 ){
+    return 'A Pipoca Queimou';
+  }else if (botao == 2 && time > 0.08 && time < 0.08 *3){
+    return 'O Macarrão Queimou';
+  } else  if (botao == 3 && time > 0.15 && time < 0.15 *3){
+    return 'A Carne Queimou';
+  }else if (botao == 4 && time > 0.12 && time < 0.12 *3){
+    return 'O Feijão Queimou'
+  }else if (botao == 5 && time > 0.08 && time < 0.08 *3){
+    return 'O Brigadeiro Queimou';;
+  }
+
+   //Validar tempo 3x
+  else if (botao == 1 && time >= 0.10 * 3){
+    return 'Kabumm!!!';
+  }else if (botao == 2 && time >= 0.08 * 3){
+    return 'Kabumm!!!';
+  } else  if (botao == 3 && time >= 0.15*3){
+    return 'Kabumm!!!';
+  }else if (botao == 4 && time >= 0.12 * 3){
+    return 'Kabumm!!!';
+  }else if (botao == 5 && time >= 0.08 * 3){
+    return 'Kabumm!!!';
+  }
 }
-tempMicronOndas(botao[0], 0.25);
+
+console.log(microOndas(1, 0.51));
+console.log(microOndas(2, 0.59));
+console.log(microOndas(3,0.56));
+console.log(microOndas(4, 0.53));
+console.log(microOndas(5, 0.59));
+
+
+
