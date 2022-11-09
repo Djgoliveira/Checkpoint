@@ -1,0 +1,30 @@
+//Arrays exemplos
+
+let cores = ["Arroz", "Feijão", "Tomate", "Frutas", "Biscoitos"];
+console.log("O metodo Join mostra a lista de dados dentro de um array separados pelo parâmetro passado dentro da função");
+console.log(cores.join("-"));
+console.log(cores);
+
+console.log("O metodo Pop Mostra o dado removido e remove o último dado e mostra o útimo de dado dentro de um array");
+console.log(cores.pop());
+console.log(cores);
+
+console.log("O método push adiciona um ou mais dados no final do array e mostra a soma dos dados");
+console.log(cores.push("Salada"));
+console.log(cores);
+
+console.log("O metodo Shift remove o primeiro dado e mostra os dados do array");
+console.log(cores.shift());
+console.log(cores);
+
+console.log("O metodo UnShift adiciona um ou mais dados no início, mostra a soma e mostra o novo array");
+console.log(cores.unshift("Douglas"));
+console.log(cores);
+
+console.log("O metodo lastIndexOf adicionando parametro dentro da função lastIndexOf e mostra a posição do array de trás para frente e mostra o array, caso não encontre dado ele mostra -1");
+console.log(cores.lastIndexOf("casa"));
+console.log(cores);
+
+console.log("O metodo Includes adicionando parametro dentro da função Includes e procura dentro do array se encontrar mostra true caso não encontre dado ele mostra false");
+console.log(cores.includes("Douglas"));
+console.log(cores);
