@@ -71,3 +71,35 @@ diferentes valores.
         return (`Você está com ${parseFloat(resultadoImc).toFixed(2)} de IMC está acima de 35 isso significa que está com Obesidade Extrema `);
  }
 console.log(imc(93,1.60));
+
+/*Crie uma função que receba uma string em minúsculas, converta-a em
+maiúsculas e as retorne.
+Investigue o que o método de .toUpperCase() faz*/
+
+const letraMaiusculas = (seutexto) =>{
+        return seutexto;
+}
+console.log(letraMaiusculas("douglas".toUpperCase()));
+
+/*
+Crie uma função que receba um parâmetro e retorne o tipo de dado deste
+parâmetro.
+Dica: Isso te ajudará a entender o que o operador typeof faz.
+*/
+const tipoDeDado = (dado)=>{
+return typeof dado;
+}
+console.log(tipoDeDado(true));
+
+/*
+Crie uma função pela qual passamos o raio de um círculo e ela retorna a
+circunferência.
+Dica: Investigue se o objeto Math tem entre suas propriedades o número Pi.
+
+*/
+const raioCirculo = (raio)=>{    
+    return parseFloat(2 * Math.PI * raio).toFixed(1);
+} 
+let valorRaio = 60;
+let resultadoRaio = raioCirculo(valorRaio);  
+console.log(`O raio da circuferência de ${valorRaio} é: ${resultadoRaio}cm`);
